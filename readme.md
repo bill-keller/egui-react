@@ -1,7 +1,1 @@
-# Git commands
-
-git init
-git status
-git add
-git commit
-git log
+# React based Inventory application utilizing REST APIs on z/OS with zOS Connect
