@@ -1,0 +1,16 @@
+yarn run dev-server
+yarn test -- --watch 
+
+git init
+git status
+git add .
+
+git commit -am "message text"
+git push
+git push heroku master
+
+heroku login
+heroku open
+heroku logs
+heroku config
+heroku config:set KEY=value
