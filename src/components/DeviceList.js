@@ -4,7 +4,14 @@ const axios = require('axios');
 
 let devices;
 
-axios.get('http://cap-sg-prd-2.integration.ibmcloud.com:16598/catalog/items?startItemID=0010')
+const axiosParams = {
+  headers: {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Accept': 'application/json',
+  },
+};
+
+axios.get('http://cap-sg-prd-2.integration.ibmcloud.com:16598/catalog/items?startItemID=0010', axiosParams)
   .then(function (response) {
     devices = response.data.cics_cat_resp.inquire_request.cat_item;
   })
