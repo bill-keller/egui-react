@@ -33,7 +33,7 @@ export default class DeviceDetailFull extends React.Component {
 
     // #############################################################################
     // get inventory details from CICS applicaiton via REST API call to z/OS Connect
-    axios.get(`http://cap-sg-prd-2.integration.ibmcloud.com:16598/catalog/items/${this.state.item_id}`)
+    axios.get(`https://cap-sg-prd-2.integration.ibmcloud.com:17241/catalog/items/${this.state.item_id}`)
     .then((response) => {
       const itemDetailsCICS = response.data.cics_single_resp.inquire_single.single_item;
       if (itemDetailsCICS) {
@@ -46,7 +46,7 @@ export default class DeviceDetailFull extends React.Component {
 
     // ##################################################################################
     // get device dimensions from DB2 z/OS via REST API call to z/OS Connect and DB2 z/OS
-    axios.get(`http://cap-sg-prd-2.integration.ibmcloud.com:16598/catalog_device_dimensions/devices/${this.state.item_id}`)
+    axios.get(`https://cap-sg-prd-2.integration.ibmcloud.com:17241/catalog_device_dimensions/devices/${this.state.item_id}`)
     .then((response) => {
       const itemDeviceDimensionsDB2 = response.data['ResultSet Output'][0];
       if (itemDeviceDimensionsDB2) {
@@ -59,7 +59,7 @@ export default class DeviceDetailFull extends React.Component {
     
     // #################################################################################
     // get shipping information from VSAM file via REST API call to z/OS Connect and DVM
-   axios.get(`http://cap-sg-prd-2.integration.ibmcloud.com:17681/catalog_shipping/itemShipping?ITEMID=${this.state.item_id}`, {
+   axios.get(`https://cap-sg-prd-2.integration.ibmcloud.com:18170/catalog_shipping/itemShipping?ITEMID=${this.state.item_id}`, {
       headers: {Authorization: 'Basic Ymt6Y2VlOnBhc3N3MHJk'}
     })
     .then((response) => {
