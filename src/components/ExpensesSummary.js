@@ -11,14 +11,16 @@ const ExpenseSummary = ({expenseCount, expensesTotal}) => {
   return (
   <div className="page-header">
     <div className="content-container">
-      <h1 className="page-header__title">Viewing <span>{expenseCount} devices</span> totalling: <span>{formattedExpenseTotal}</span></h1>
+      <h1 className="page-header__title">Cart contains <span>{expenseCount} devices</span> totalling: <span>{formattedExpenseTotal}</span></h1>
       <div className="page-header_actions">
-        <Link className="button" to ="/create">Add Device</Link>
+        <Link className="button" to ="/dashboard">Add Device</Link>
       </div>
     </div>
     
   </div>
 )};
+
+        // <Link className="button" to ="/create">Add Device</Link> 
 
 const mapStateToProps = (state) => {
   const visibleExpenses = selectExpenses(state.expenses, state.filters);
