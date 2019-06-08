@@ -19,6 +19,11 @@ export const sortByItemID = () => ({
   type: 'SORT_BY_ITEM_ID'
 })
 
+// SORT_BY_DESCRIPTION
+export const sortByDescription = () => ({
+  type: 'SORT_BY_DESCRIPTION'
+})
+
 // SET_START_DATE
 export const setStartDate = (startDate) => ({
   type: 'SET_START_DATE',

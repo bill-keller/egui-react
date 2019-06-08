@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { DateRangePicker } from 'react-dates';
-import { setTextFilter, sortByInStock, sortByItemID} from '../actions/filters';
+import { setTextFilter, sortByInStock, sortByDescription} from '../actions/filters';
 
 export class DeviceListFilters extends React.Component {
   state = {
@@ -18,10 +18,10 @@ export class DeviceListFilters extends React.Component {
     this.props.setTextFilter(e.target.value);
   };
   onSortChange = (e) => {
-    if (e.target.value === 'in_stock') {
+    if (e.target.value === 'description') {
+      this.props.sortByDescription();
+    } else if (e.target.value === 'in_stock') {
       this.props.sortByInStock();
-    } else if (e.target.value === 'item_id') {
-      this.props.sortByItemID();
     }
   };
   render() {
@@ -43,7 +43,7 @@ export class DeviceListFilters extends React.Component {
               value={this.props.filters.sortBy}
               onChange={this.onSortChange}
             >
-              <option value="item_id">Item ID</option>
+              <option value="description">Description</option>
               <option value="in_stock">Qty In Stock</option>
             </select>
           </div>
@@ -71,7 +71,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   setTextFilter: (text) => dispatch(setTextFilter(text)),
-  sortByItemID: () => dispatch(sortByItemID()),
+  sortByDescription: () => dispatch(sortByDescription()),
   sortByInStock: () => dispatch(sortByInStock())
 });
 

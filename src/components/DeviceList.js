@@ -1,6 +1,5 @@
 import React from 'react';
 import DeviceDetail from './DeviceDetail';
-const axios = require('axios');
 import { connect } from 'react-redux';
 import selectDevices from '../selectors/devices';
 
