@@ -21,16 +21,6 @@ switch (action.type) {
       ...state,
       sortBy: 'amount'
     }
-  case 'SORT_BY_IN_STOCK':
-    return {
-      ...state,
-      sortBy: 'in_stock'
-    }
-  case 'SORT_BY_ITEM_ID':
-    return {
-      ...state,
-      sortBy: 'item_id'
-    }
   case 'SORT_BY_DATE':
     return  {
       ...state,

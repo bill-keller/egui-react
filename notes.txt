@@ -14,3 +14,14 @@ heroku open
 heroku logs
 heroku config
 heroku config:set KEY=value
+
+
+redux notes:
+createStore() - provide default state
+  - need to update store/configureStore for devices
+actions - an object that gets sent to the store - used to update store
+  - store.dispatch({actionobject}) method get called with action object to update store
+  - need to create actions/devices.js action object 
+    - with type: SET_DEVICES
+    - used to load device data from API calls and firebase DB calls
+reducers - change application state based on action description

@@ -1,12 +1,12 @@
 import React from 'react';
 import DeviceList from './DeviceList';
-import ExpenseListFilters from './ExpenseListFilters';
-import ExpensesSummary from './ExpensesSummary';
+import DeviceListFilters from './DeviceListFilters';
+import DevicesSummary from './DevicesSummary';
 
 const DeviceDashboardPage = () => (
   <div>
-    <ExpensesSummary />
-    <ExpenseListFilters />
+    <DevicesSummary />
+    <DeviceListFilters />
     <DeviceList />
   </div>
 );

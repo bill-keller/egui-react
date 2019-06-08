@@ -9,14 +9,9 @@ export const sortByAmount = () => ({
   type: 'SORT_BY_AMOUNT'
 })
 
-// SORT_BY_IN_STOCK
-export const sortByInStock = () => ({
-  type: 'SORT_BY_IN_STOCK'
-})
-
-// SORT_BY_ITEM_ID
-export const sortByItemID = () => ({
-  type: 'SORT_BY_ITEM_ID'
+// SORT_BY_DATE
+export const sortByDate = () => ({
+  type: 'SORT_BY_DATE'
 })
 
 // SET_START_DATE

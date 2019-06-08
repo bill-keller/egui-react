@@ -22,12 +22,6 @@ const ExpenseSummary = ({expenseCount, expensesTotal}) => {
 
         // <Link className="button" to ="/create">Add Device</Link> 
 
-const mapStateToProps = (state) => {
-  const visibleExpenses = selectExpenses(state.expenses, state.filters);
-  return {
-    expenseCount: visibleExpenses.length,
-    expensesTotal: selectExpensesTotal(visibleExpenses)
-  };
-};
 
-export default connect(mapStateToProps)(ExpenseSummary);
+
+export default ExpenseSummary;
