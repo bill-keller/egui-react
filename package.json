@@ -55,7 +55,7 @@
     "tough-cookie": "^3.0.1",
     "tunnel-agent": "^0.6.0",
     "uuid": "^3.1.0",
-    "validator": "8.0.0",
+    "validator": "13.7.0",
     "webpack": "3.1.0",
     "webpack-cli": "^3.3.2"
   },
